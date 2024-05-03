@@ -40,7 +40,7 @@ export default function ToDo({
         <FontAwesomeIcon
           icon={faCircleCheck}
           className={`text-xl cursor-pointer dark:text-white  transition-colors duration-300" ${
-            note.isComplete && "text-green-600 dark:text-green-600"
+            note.isComplete && "text-green-600 dark:text-green-700 "
           }`}
           onClick={handleComplete}
         />
