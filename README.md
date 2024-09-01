@@ -5,7 +5,7 @@
 This is a React project called Taskify, a user-friendly task management application designed to help users organize and prioritize their daily tasks efficiently. It is built using modern web technologies such as React, TypeScript, Tailwind CSS, and Context API, ensuring a robust and interactive user experience. Taskify also includes light/dark mode functionality and uses localStorage to save user notes persistently.
 
 ### Demo
-[Live Demo](https://app.netlify.com/sites/taskapp16/deploys) 
+[Live Demo](https://taskapp16.netlify.app/) 
 
 ## Table of contents
 
