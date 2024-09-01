@@ -2,13 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-regular-svg-icons";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import ToDoForm from "./ToDoForm";
-import { type Todo } from "../model";
 import ToDo from "./ToDo";
 import EditToDo from "./EditToDo";
 import { useToDoContext } from "../context/ContextProvider";
 
 export default function ToDoWrapper() {
-  const { handleDarkMode, darkMode, notes, setNotes } = useToDoContext();
+  const { handleDarkMode, darkMode, notes } = useToDoContext();
 
   // const editNote = (id: string) => {
   //   setNotes((prev) =>
