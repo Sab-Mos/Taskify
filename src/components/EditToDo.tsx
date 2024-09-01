@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { type Todo } from "../model";
+import { useToDoContext } from "../context/ContextProvider";
 
 type Props = {
-  addEditedNote: (id: string, text: string) => void;
   note: Todo;
 };
 
-export default function EditToDo({ addEditedNote, note }: Props) {
-  const [value, setValue] = useState<string>("");
+export default function EditToDo({ note }: Props) {
+  const { addEditedNote } = useToDoContext();
+
+  const [value, setValue] = useState<string>(note.body);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
@@ -28,7 +30,7 @@ export default function EditToDo({ addEditedNote, note }: Props) {
         value={value}
         onChange={handleChange}
         type="text"
-        className=" py-2 px-2 rounded-l-lg  outline-none  bg-[#eef1f1]"
+        className="py-2 px-2 rounded-l-lg outline-none bg-[#eef1f1]"
       />
       <button className="text-white bg-black px-3 py-2 rounded-r-lg font-bold hover:bg-white hover:text-black hover:ring-black hover:ring-1 font-[roboto]">
         Edit Task
